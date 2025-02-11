@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Crayz's Blog</title><meta name="author" content="Crayz"><meta name="copyright" content="Crayz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Crayz&#39;s Blog">
+<meta property="og:url" content="http://crayz-l.github.io/page/4/index.html">
+<meta property="og:site_name" content="Crayz&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://crayz-l.github.io/img/avator.jpg">
+<meta property="article:author" content="Crayz">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://crayz-l.github.io/img/avator.jpg"><link rel="shortcut icon" href="/img/home.png"><link rel="canonical" href="http://crayz-l.github.io/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Crayz\'s Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/css/modify.css"><meta name="generator" content="Hexo 7.3.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="web_bg" style="background-image: url(/img/background.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avator.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: transparent;"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Crayz's Blog</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Crayz's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/43911/" title="实验4 MySQL单表查询">实验4 MySQL单表查询</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-12T06:52:00.000Z" title="发表于 2025-01-12 14:52:00">2025-01-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">第1关 在users表中新增一个用户，user_id为2019100904学号，name为’2019-物联网-李明’ 123456789USE `sqlexp-sztuoj`;#请在此处添加实现代码########## Begin ##########INSERT INTO users(user_id,name)VALUES(2019100904,&#x27;2019-物联网-李明&#x27;);########## End ###########以下代码禁止删除SELECT * FROM users WHERE users.user_id = &#x27;2019100904&#x27;; 第2关 在users表中更新用户 user_id为robot_2 的信息，name设为 ‘机器人二号’ 12345678910USE `sqlexp-sztuoj`;#请在此处添加实现代码########## Begin ##########UPDATE usersSET name=&#x27;机器人二号&#x27;WHERE...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/57811/" title="实验3 MySQL的DDL语言">实验3 MySQL的DDL语言</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-11T13:38:00.000Z" title="发表于 2025-01-11 21:38:00">2025-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">第1关 将P表中的所有红色零件的重量增加6 1234567USE mydata;UPDATE Pset WEIGHT=WEIGHT+6WHERE COLOR=&#x27;红&#x27;;SELECT * FROM P; 第2关 把P表中全部红色零件的颜色改成蓝色 1234567USE mydata;UPDATE PSET COLOR=&#x27;蓝&#x27;WHERE COLOR=&#x27;红&#x27;;SELECT * FROM P; 第3关 将SPJ表中由S5供给J4的零件P6改为由S3供应 1234567USE mydata;UPDATE SPJSET SNO=&quot;S3&quot;WHERE PNO=&quot;P6&quot; AND JNO=&quot;J4&quot; AND SNO=&quot;S5&quot;;SELECT * FROM SPJ; 第4关 将SPJ表中所有天津供应商的QTY属性值减少11（用子查询方式） 123456789101112USE mydata;UPDATE SPJSET QTY=QTY-11WHERE SNO IN( ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/33322/" title="实验2 MySQL软件操作及建库建表建数据">实验2 MySQL软件操作及建库建表建数据</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-11T13:31:00.000Z" title="发表于 2025-01-11 21:31:00">2025-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">第1关  创建数据库 123CREATE DATABASE mydata;show databases; 第2关 创建供应商表S，并插入数据 123456789101112131415USE mydata;CREATE TABLE S(   SNO CHAR(2),   SNAME VARCHAR(5),   STATUS INT,   CITY CHAR(2));INSERT INTO S VALUES(&#x27;S1&#x27;,&#x27;精益&#x27;,20,&#x27;天津&#x27;);INSERT INTO S VALUES(&#x27;S2&#x27;,&#x27;盛锡&#x27;,10,&#x27;北京&#x27;);INSERT INTO S VALUES(&#x27;S3&#x27;,&#x27;东方红&#x27;,30,&#x27;北京&#x27;);INSERT INTO S VALUES(&#x27;S4&#x27;,&#x27;丰泰盛&#x27;,20,&#x27;天津&#x27;);INSERT INTO S...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/205686455/" title="OS报告">OS报告</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-11T10:39:00.000Z" title="发表于 2025-01-11 18:39:00">2025-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">资料下载请点此处 操作系统的实验是基于linux系统，多数同学都是使用windows系统，此时需要安装Vmware应用来使用虚拟机，建议linux系统的版本为Ubuntu22，过于新的版本会存在一定的bug。 24年春季学期操作系统的报告内容及相关复习资料已存在网盘链接中，有需要的同学可以自行下载。 网盘中还存放Vmware安装包，激活密钥以及Ubuntu22的镜像。 推荐网课：操作系统原理期末速成不挂科主攻大题_哔哩哔哩_bilibili </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/16107/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-01-10T08:00:39.861Z" title="发表于 2025-01-10 16:00:39">2025-01-10</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start Create a new post 1$ hexo new &quot;My New Post&quot; More info: Writing Run server 1$ hexo server More info: Server Generate static files 1$ hexo generate More info: Generating Deploy to remote sites 1$ hexo deploy More info: Deployment </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/129956530/" title="DataBase 数据类型">DataBase 数据类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-22T05:23:00.000Z" title="发表于 2024-05-22 13:23:00">2024-05-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">String 类型  CHAR 固定长度字符串  char会开辟指定个字符的一个储存空间，假如存放一个字符A，剩余的字符空着放那，别的字符也不可以使用。   VARCHAR 可变长度字符串 max：64KB  varchar会根据我们存放的字符的长度来开辟存储空间。   LONGTEXT 长文本串 max：4GB  整数类型  TINYINT  占用字节：1B，数值范围：[-128, 127]   UNSIGNED TINYINT (无符号微整型)  数值范围：[0, 255]   SMALLINT  占用字节：2B，数值范围：[-32K, 32K]   MEDIUMINT  占用字节：3B，数值范围：[-8M, 8M]   INT  占用字节：4B，数值范围：[-2B, 2B]   BIGINT  占用字节：8B，数值范围：[-9Z, 9Z]    浮点数类型  DECIMAL(p,s)  用于存储定点数...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/1137404687/" title="DataBase 事务">DataBase 事务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-18T08:18:00.000Z" title="发表于 2024-05-18 16:18:00">2024-05-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">代表单个工作单元的一组SQL语句，在事务中的语句都应成功完成。 属性（ACID）：  原子性(Atomicity) 事务不可中断,要么事务中所有语句被执行,要么事务被退回,执行的更改被撤销 一致性(Consistency) 数据库状态保持一致 隔离性质(Isolation) 事务之间彼此不受干扰，且一次只有一个事务可更新同样的数据（互斥） 持久性(Durability) 事务产生的更改是永久的  创建事务 12345START TRANSACTION; -- 开启事务 -- 要执行的语句COMMIT; -- 关闭事务 常见并发问题  脏读（Dirty Reads）  事务读取了尚未被提交的数据   不可重复读（Non-repeating Reads）  就是一个事务读到另一个事务修改后并提交的数据（update）。在同一个事务中，对于同一组数据读取到的结果不一致   幻读（Phantom...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/1698569466/" title="DataBase 触发器和事件">DataBase 触发器和事件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-16T02:58:00.000Z" title="发表于 2024-05-16 10:58:00">2024-05-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">触发器  MySQL触发器（Trigger）是一种特殊的存储过程， 它与表有关，当表上的特定事件（insert，update，delete）发生时，触发器会自动执行。 可以使用触发器来实现数据约束，数据验证，数据复制等功能  数据复制：通过创建触发器，在给一张表插入数据的同时给另一张表插入同样的数据 数据验证：在插入或更新数据时，检查记录的某些字段是否符合要求，则拒绝插入或者更新，这样可以保证数据的完整性和一致性   触发时间分为AFTER和BEFORE两种  创建触发器 12345678910DELIMITER $$CREATE TRIGGER payments_after_delete AFTER DELETE ON payments FOR EACH ROWBEGIN 	UPDATE invoices    SET payment_total = payment_total - OLD.amount    WHERE invoice_id = OLD.invoice_id;END$$DELIMITER ; 查看触发器 1SHOW TRIGGER  删除触发器 1DROP...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/1132319962/" title="DataBase 存储过程">DataBase 存储过程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-13T12:27:00.000Z" title="发表于 2024-05-13 20:27:00">2024-05-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">存储过程是一个包含一堆SQL代码的数据库对象 修改默认分隔符的原因： 在MySQL中创建存储过程时，我们通常需要修改默认的分隔符。原因是MySQL默认使用分号（;）作为SQL语句的结束标志。但在存储过程中，我们可能需要使用多条SQL语句，并且这些语句也是以分号结束的。 如果不修改默认的分隔符，MySQL会在遇到第一个分号时就认为存储过程的定义结束了，从而导致存储过程的创建失败。因此，我们通常在创建存储过程前先设置一个临时的分隔符（例如 $$)，然后在存储过程结束后再将分隔符改回分号。 创建存储过程 12345678910DELIMITER $$ -- 修改默认分隔符CREATE PROCEDURE get_invoices_with_balance()BEGIN 	SELECT *    FROM invoices_with_balance; -- 在begin-end中，每一次的查询语句都用；分隔END$$ -- 使用修改后的默认分隔符来将begin-end中的内容视为一个整体DELIMITER ;CALL get_invoices_with_balance() --...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/802921560/" title="DataBase 常用函数">DataBase 常用函数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-07T12:41:00.000Z" title="发表于 2024-05-07 20:41:00">2024-05-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">数值函数 ROUND函数 格式：ROUND（value，parameter） 将value四舍五入到paramet位小数 12SELECT ROUND(5.7542,2)-- 运行结果：5.75 TRUNCATE函数 格式：TRUNCATE（value，parame） 将value截断到paramet位小数 12SELECT TRUNCATE(5.7552,2)-- 运行结果：5.75 CEILING函数 格式：CELING（value） 返回大于或等于value的最小整数 12SELECT CEILING(5.76)-- 运行结果：6 FLOOR函数 格式：FLOOR（value） 返回小于或等于value的最大整数 12SELECT FLOOR(1.52)-- 运行结果：1 ABS函数 格式：ABS（value） 返回绝对值 12SELECT ABS(-5.2)-- 运行结果：5.2 RAND函数 生成0-1之间的随机值 1SELECT RAND() 字符串函数 LENGTH函数 格式：LENGTH（str） 返回字符串的字符个数 12SELECT...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avator.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Crayz</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/1935878460/" title="CPP_第15周">CPP_第15周</a><time datetime="2025-02-11T14:35:00.000Z" title="发表于 2025-02-11 22:35:00">2025-02-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/3420409433/" title="CPP_第14周">CPP_第14周</a><time datetime="2025-02-11T14:31:00.000Z" title="发表于 2025-02-11 22:31:00">2025-02-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/1443395296/" title="CPP_第13周">CPP_第13周</a><time datetime="2025-02-11T13:51:00.000Z" title="发表于 2025-02-11 21:51:00">2025-02-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4004778373/" title="CPP_第12周">CPP_第12周</a><time datetime="2025-02-11T13:45:00.000Z" title="发表于 2025-02-11 21:45:00">2025-02-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4227972715/" title="CPP_第11周">CPP_第11周</a><time datetime="2025-02-05T12:18:00.000Z" title="发表于 2025-02-05 20:18:00">2025-02-05</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">题解</span><span class="card-category-list-count">30</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">操作系统</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 1.3em; color: #99a1ac">面向对象程序设计</a> <a href="/tags/MySQL/" style="font-size: 1.5em; color: #99a9bf">MySQL</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/02/">
+          <span class="card-archive-list-date">二月 2025</span>
+          <span class="card-archive-list-count">7</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">一月 2025</span>
+          <span class="card-archive-list-count">28</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/05/">
+          <span class="card-archive-list-date">五月 2024</span>
+          <span class="card-archive-list-count">10</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">45</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">54.8k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-02-11T14:42:26.745Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Crayz</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["Life is a journey"])
+  } else {
+    document.getElementById("subtitle").textContent = "Life is a journey"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
